@@ -70,3 +70,33 @@ def employee_award(work_hours):
 
 result = employee_award(work_hours)
 print(result)
+
+
+# args and kwargs
+
+def number(*args):
+    return sum(args) * 0.05
+result = number(10,20)
+print(result)
+
+def keywords(**kwargs):
+    return kwargs
+result = keywords(food='eggs', fruit='apple', animal='cat')
+print(result)
+
+def numbers(*args):
+    print(args)
+    print("My nubmer is : {}".format(args[0]))
+numbers(10,20,32,49,45,90)
+
+def sample_kwds(**kwargs):
+    print(kwargs)
+    print("My fruit is {}".format(kwargs['fruit']))
+sample_kwds(food='Eggs', fruit='Orange', animal='cat')
+
+
+def both_args_kwargs(*args,**kwargs):
+    print(args)
+    print(kwargs)
+    print("I have {} {}".format(args[0],kwargs['fruit']))
+both_args_kwargs(10,23,54,13,fruit='Oranges',food='eggs')
